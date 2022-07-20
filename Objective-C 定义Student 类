@@ -1,0 +1,45 @@
+//  student.h
+//  Student
+//  Created by Nemo on 2022/7/19.
+//
+#import <Foundation/Foundation.h>
+@interface Student : NSObject
+{
+    @public
+    // 特征
+    NSString *Name;
+    NSString *Major;
+    int Age;
+}
+
+-(void)study:(float)time;
+@end
+
+
+//  student.m
+//  Student
+//  Created by Nemo on 2022/7/19
+//
+#import "student.h"
+@implementation Student
+- (void)study:(float)time
+{
+    NSLog(@"%@学习了%.2f小时",Name,time);
+}
+@end
+
+
+//  main.m
+//  Student
+//  Created by Nemo on 2022/7/19
+//
+#import <Foundation/Foundation.h>
+#import "student.h"
+int main(int argc, const char * argv[]) {
+    @autoreleasepool {
+        Student *s1 = [Student new];     
+        s1->Name = @"Nemo";
+        [s1 study:6.5f]; 
+    }
+    return 0;
+}
