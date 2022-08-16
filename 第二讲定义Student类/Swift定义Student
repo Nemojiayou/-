@@ -1,0 +1,14 @@
+import Cocoa
+
+class Student{
+    var name:String = "Nemo"
+    var major:String = "Computer"
+    var age:Int = 23
+  
+}
+class study{
+    var time = 6.5
+}
+let student = Student()
+let times = study()
+print("\(student.name)学习了\(times.time)小时")
